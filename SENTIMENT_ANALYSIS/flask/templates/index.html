@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sentiment Analysis</title>
+    <style>
+        body{
+            background-image: url('/static/images/bg3.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        h1,p{
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 40px;
+            font-weight: bold;
+            text-align: center;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>SENTIMENT ANALYSIS</h1><br>
+    <p>Tell Me About Your Day In The Below Textarea <br>And Press The Below Sentiment Button
+        <br>To Find Your Emotion.
+    </p>
+    <form action="/analyze" method="post">
+        <textarea name="text" rows="4" cols="50"></textarea>
+        <br>
+        <input id="button" type="image" src="{{url_for('static',filename='/images/sentibut.jpg')}}" alt="SUBMIT"  width="120" height="120">
+    </form>
+</body>
+</html>

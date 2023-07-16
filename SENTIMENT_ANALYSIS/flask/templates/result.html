@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sentiment Analysis Result</title>
+    <style>
+        body{
+            background-image: url('/static/images/chatgif3.gif');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        b{
+            color: springgreen;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 33px;
+            font-style:italic;
+            font-weight: bold;
+            text-align: center;
+        }
+        #parent{
+            background-color: rgb(101, 125, 148);
+            border: 2px solid black;
+            margin-left: 830px;
+            margin-top: 80px;
+            text-align: center;
+            width:500px;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <div>
+            <b>--ANALYSIS RESULT--<br><br>
+            TEXT: {{ text }}<br>
+            EMOTION: {{ sentiment }}<br></b>
+            <img src="{{ image }}" alt="Emotion" width="310" height="310">
+        </div>
+    </div>
+</body>
+</html>
