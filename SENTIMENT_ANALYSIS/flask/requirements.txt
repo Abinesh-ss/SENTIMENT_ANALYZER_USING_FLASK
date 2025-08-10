@@ -1,4 +1,0 @@
-Flask
-textblob
-gunicorn
-nltk
