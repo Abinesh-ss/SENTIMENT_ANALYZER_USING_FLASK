@@ -10,32 +10,62 @@
             background-image: url('/static/images/bg3.jpg');
             background-size: cover;
             background-repeat: no-repeat;
+            background-position: center;
             margin: 0;
             padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
         }
+
         h1, p {
             color: white;
             font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            margin: 0 0 15px 0;
+        }
+
+        h1 {
             font-size: 40px;
             font-weight: bold;
-            text-align: center;
         }
+
+        p {
+            font-size: 20px;
+            max-width: 90%;
+        }
+
         form {
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 0 10px;
+            width: 100%;
         }
+
         textarea {
             width: 90%;
             max-width: 500px;
             font-size: 16px;
             resize: vertical;
+            padding: 8px;
+            border-radius: 5px;
+            border: none;
         }
+
+        #button {
+            margin-top: 15px;
+            cursor: pointer;
+        }
+
         /* Responsive adjustments */
         @media (max-width: 600px) {
-            h1, p {
-                font-size: 24px;
+            h1 {
+                font-size: 28px;
+            }
+            p {
+                font-size: 16px;
             }
             textarea {
                 font-size: 14px;
@@ -48,14 +78,14 @@
     </style>
 </head>
 <body>
-    <h1>SENTIMENT ANALYSIS</h1><br>
-    <p>Tell Me About Your Day In The Below Textarea <br>And Press The Below Sentiment Button
-        <br>To Find Your Emotion.
+    <h1>SENTIMENT ANALYSIS</h1>
+    <p>Tell Me About Your Day In The Below Textarea <br>
+       And Press The Below Sentiment Button <br>
+       To Find Your Emotion.
     </p>
     <form action="/analyze" method="post">
         <textarea name="text" rows="4" cols="50"></textarea>
-        <br>
-        <input id="button" type="image" src="{{url_for('static',filename='/images/sentibut.jpg')}}" alt="SUBMIT" width="120" height="120">
+        <input id="button" type="image" src="{{url_for('static',filename='images/sentibut.jpg')}}" alt="SUBMIT" width="120" height="120">
     </form>
 </body>
 </html>
